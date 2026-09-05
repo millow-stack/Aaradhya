@@ -1,72 +1,108 @@
-# Aaradhya — High-Fidelity Monolithic Serverless Prototype
+# Aaradhya — Production-Grade Vedic Ritual Management Platform
 
 > **"Your rituals, organised. Faith with less friction."**
 
-Aaradhya is a trusted ritual-management platform that makes Hindu rituals easier to discover, book, coordinate, track, and repeat for a family. Built as a high-fidelity, responsive, monolithic serverless web application using pure **HTML5, CSS3, and vanilla JavaScript (zero external runtime dependencies)**.
+Aaradhya is an enterprise-grade ritual orchestration platform that simplifies the discovery, booking, coordination, live tracking, and generational preservation of Hindu ceremonies. Engineered using a **zero-dependency, serverless modular architecture** in pure HTML5, CSS3, and modern vanilla JavaScript.
 
 ---
 
-## Key Strategic Pillars
+## Architectural Highlights (Version 2.0.0)
 
-1. **Ritual Orchestration**: Coordinates the entire physical ritual journey:  
-   `Need → Ritual → Muhurat → Pandit → Samagri → Execution → Completion → Memory → Rebooking`
-2. **Family Ritual OS**: The user's family is a persistent entity with stored Gotra, tradition, preferred Purohit, previous rituals, and smart festive reminders.
-3. **The Trust Stack**: Vetted Vedic Pandits, transparent packages, unadulterated Samagri checklist, live operational tracking, and digital Sankalp certificates.
-4. **Deterministic Pitch & Demo Mode**: Includes an integrated top controller with an auto-advancing 30–60s pitch sequence, 390px mobile viewport toggle, and demo reset.
+```
+aaradhya/
+├── index.html                 # Semantic HTML5 stage, landmarks, offline banner & modals
+├── styles.css                 # Sacred Sattvic/Sanctum design system, print styles & WCAG AA
+├── app.js                     # Root view coordinator, event bus & lifecycle manager
+├── package.json               # Node script runners (npm test, npm start)
+├── vercel.json                # Serverless edge routing & clean URLs
+├── js/
+│   ├── core/
+│   │   ├── security.js        # HTML escaping (XSS immunization), input sanitizers & validators
+│   │   └── store.js           # Reactive store, schema v2 persistence, multi-booking & telemetry
+│   ├── data/
+│   │   └── catalog.js         # Rigvedic/Yajurvedic ritual specifications & verified Purohit rosters
+│   └── services/
+│       ├── panchang.js        # Dynamic astronomical Panchang engine (Tithi, Nakshatra, Rahu Kaal)
+│       ├── audio.js           # Web Audio API synthesizer for Tanpura drone (138.59Hz Sa) & Temple Bells
+│       └── certificate.js     # Printable Digital Sankalp Patras & RFC 5545 iCal calendar sync
+└── tests/
+    └── unit-tests.js          # Automated zero-dependency test runner (19 test cases)
+```
 
 ---
 
-## Screen Catalog (15+ High-Fidelity Screens)
+## Strategic Production Pillars
 
-- **Screen 01 & 03: Home**: Sacred hero banner, dominant "Book a Puja" CTA, popular rituals grid (Griha Pravesh, Satyanarayan, Havan, etc.), smart festival reminder ("Navratri begins in 7 days"), family lifecycle card, and sacred utilities.
-- **Screen 04: Puja Discovery**: Searchable catalog with category filter chips, pricing, and Vedic inclusions.
-- **Screen 05: Puja Details**: Comprehensive overview of ritual significance, deity, duration, and Trust Stack guarantees.
-- **Screen 06: Package Selection**: Two clean comparison packages (**Essential ₹5,500** vs. **Premium ₹8,999** Recommended).
-- **Screen 07: Date & Muhurat**: Recommended Vedic Panchang slot (**18 October 2026, 10:00 AM – 12:15 PM** with Shubh Choghadiya & Rohini Nakshatra), alternative slots, and custom date picker.
-- **Screen 08: Puja Location**: Doorstep address form with city hub coverage preview.
-- **Screen 09: Pandit Matching**: Interactive matching animation ("Finding the right Pandit for you…") matching language, tradition, and experience, followed by **Pandit Rajesh Sharma** profile and alternative Purohit switcher.
-- **Screen 10: Samagri Selection**: Complete 18-item unadulterated Samagri package (with categorized expandable checklist) vs. self-managed option.
-- **Screen 11: Review & Secure Payment**: Transparent pricing breakdown (no hidden Dakshina or cash haggling) and escrow payment simulator (UPI, Card, Net Banking).
-- **Screen 12: Booking Confirmation**: Reassurance banner, booking summary, and instant calendar sync.
-- **Screen 13: Booking Tracking**: Vertical timeline showing real-time progression (`Confirmed` → `Pandit Assigned` → `Samagri Preparing` → `On The Way` → `Arrived` → `Completed`) with Pandit contact and 24×7 Concierge support.
-- **Screen 14: Completion / Ritual Memory**: Ceremony conclusion, Digital Sankalp Certificate download/share, and 4-photo ritual memory vault.
-- **Screen 15: Family Profile**: Family members (Drishti, Vikram, Maa, Papa) with Rashi/Nakshatra, Gotra (Kashyap), preferred Purohit, 1-click rebook, and ritual history.
-- **Temple Seva**: Ancient temple offering flow (Kashi Vishwanath, Mahakaleshwar, Tirupati Balaji) with consecrated Prasad delivery.
-- **Vedic Kundli & Muhurat**: Janampatri generator and daily Panchang auspicious timings.
+1. **Multi-Booking Operational Lifecycle**:
+   - Manages multiple concurrent and past ceremonies with unique IDs (`AR-2026-XXXX`).
+   - 6-step real-time state machine: `Confirmed` → `Pandit Assigned` → `Samagri Preparing` → `On The Way` → `Arrived` → `Completed`.
+   - Automated Escrow Cancellation & 100% refund calculations.
+   - Post-ceremony Verified Devotee Rating & Review workflow.
+
+2. **Persistent Family Ritual OS**:
+   - Full CRUD operations for household members with Zodiac (Rashi) and Nakshatra alignment.
+   - Generational memory vault preserving family Gotras, Purohits, and completed Sankalp records.
+   - Complete Data Sovereignty: One-click JSON data export (backup) and import (restore).
+
+3. **Astronomical Vedic Panchang Engine**:
+   - Real lunar synodic phase and sidereal motion algorithms calculating actual Tithi, Nakshatra, and ruling deities for any Gregorian date.
+   - Accurate dynamic calculation of Rahu Kaal, Yamaganda, and Choghadiya periods (Shubh, Amrit, Labh, Char, Rog, Kaal, Udveg).
+
+4. **Security & Defensive Engineering**:
+   - Rigorous HTML entity escaping (`escapeHTML`) on all user-supplied interpolations.
+   - Pincode and Indian phone number validation.
+   - Safe localStorage serialization with corruption auto-recovery and schema migrations.
+
+5. **Audio Synthesis & Sacred Utilities**:
+   - Pure Web Audio API drone synthesizing fundamental Sa (138.59 Hz) and Pa (207.65 Hz) harmonics with zero external MP3/audio files.
+   - 108-bead tactile digital Japa Mala counter with mobile haptic vibration and milestone temple bell chimes.
+
+6. **Accessibility & Offline Resilience**:
+   - WCAG AA contrast compliance across both Sattvic Light and Sanctum Dark modes.
+   - Immediate offline degradation banner with uninterrupted offline operation.
+   - Keyboard navigation with ESC modal dismissal and focus containment.
 
 ---
 
 ## How to Run
 
 ### Direct Local Browser
-Open `index.html` directly in any modern browser (Chrome, Edge, Safari, Firefox).
+Open `index.html` directly in any modern browser (Chrome, Edge, Safari, Firefox). Zero build tools required.
 
-### Local HTTP Server
+### Local Server
 ```bash
-# Using Python
-python -m http.server 8080
+# Using Node npm
+npm start
 
-# Using Node.js npx
-npx serve .
+# Using Python
+npm run serve
+# or: python -m http.server 8080
 ```
-Then visit `http://localhost:8080`.
+Visit `http://localhost:8080`.
 
 ---
 
-## Deployment
+## Automated Testing
 
-Deployable instantly to any static host:
-- **Vercel**: Pre-configured with `vercel.json` (`cleanUrls: true`).
-- **GitHub Pages**: Push repository and enable GitHub Pages on root.
-- **Netlify / Cloudflare Pages**: Drag and drop folder.
+Aaradhya includes an automated unit and integration test suite with zero external dependencies:
 
-Zero build steps, zero npm installs, 100% serverless.
+```bash
+npm test
+# or: node tests/unit-tests.js
+```
+
+### Verified Test Coverage:
+- **Security & XSS Immunization**: Malicious script injection, quote escaping, null safety, phone & 6-digit pincode validation.
+- **Panchang & Muhurat Engine**: Tithi, Nakshatra, and weekday Rahu Kaal calculations.
+- **Booking State Machine**: Booking creation, 6-step progression, review submission, cancellation & refund calculation, slot rescheduling.
+- **Family Ritual OS**: Member CRUD, 108 Japa round completion, Seva records, and state JSON backup/restore.
 
 ---
 
 ## Presentation & Pitch Guide
 
-1. Click **⚡ Pitch Demo (60s)** in the top bar to auto-run the core demo path:  
-   `Home → Griha Pravesh → Premium → Muhurat → Location → Pandit Matching → Samagri → Review → Confirmation → Tracking → Advance to Complete → Ritual Memory → Family Profile`.
-2. Click **📱 Mobile Frame** to switch between full responsive desktop layout and a simulated 390px mobile viewport.
-3. Click **🔄 Reset** at any time to restore pristine initial state.
+1. Click **⚡ Pitch Demo (60s)** in the top controller to auto-run the end-to-end customer journey.
+2. Click **📊 Audit Log** in the top bar to inspect structured real-time telemetry and state transitions.
+3. Click **💾 Backup** to test exporting and importing the ritual archive.
+4. Click **📱 Mobile Frame** to switch between responsive layout and simulated 390px mobile viewport.
+5. Click **🔄 Reset** to restore pristine initial demo state with clean seed data.

@@ -1,0 +1,22 @@
+{
+  "name": "aaradhya",
+  "version": "2.0.0",
+  "description": "Aaradhya — Trusted Hindu Ritual Management Platform. Faith with less friction.",
+  "main": "app.js",
+  "scripts": {
+    "test": "node tests/unit-tests.js",
+    "start": "npx serve -l 8080 .",
+    "serve": "python -m http.server 8080"
+  },
+  "keywords": [
+    "vedic",
+    "rituals",
+    "hindu",
+    "puja",
+    "panchang",
+    "serverless",
+    "vanilla-js"
+  ],
+  "author": "Aaradhya Technologies",
+  "license": "MIT"
+}
