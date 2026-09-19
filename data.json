@@ -1,0 +1,509 @@
+{
+  "site": {
+    "name": "Aaradhya",
+    "tagline": "Your rituals, organised.",
+    "motto": "॥ श्रद्धा • संकल्प • संस्कार ॥",
+    "shloka": "॥ सत्यं शिवं सुन्दरम् ॥",
+    "logo": "logo.png",
+    "defaultCity": "Delhi NCR",
+    "cities": ["Delhi NCR", "Varanasi", "Haridwar", "Mumbai", "Bangalore"],
+    "contact": {
+      "phone": "+91 98765 43210",
+      "email": "namaste@aaradhya.in",
+      "hours": "Mon – Sun: 7:00 AM – 9:00 PM IST",
+      "hubs": "Delhi NCR • Varanasi • Haridwar • Mumbai • Bangalore",
+      "certification": "Kashi Vidvat Parishad Certified Standard"
+    }
+  },
+  "panchang": {
+    "tithi": "Shukla Dashami",
+    "tithiLabel": "Today's Auspicious Tithi",
+    "nakshatra": "Rohini Nakshatra",
+    "nakshatraLabel": "Ruling Lunar Mansion",
+    "rahuKaal": "16:30 – 18:00",
+    "rahuKaalLabel": "Rahu Kaal (Avoid Major Sankalp)",
+    "shubhMuhurat": "11:45 AM – 01:15 PM (Abhijit)",
+    "verification": "Kashi Vidvat Parishad"
+  },
+  "festivals": [
+    {
+      "id": "navratri-2026",
+      "name": "Sharad Navratri",
+      "deity": "Goddess Durga",
+      "icon": "🪔",
+      "date": "2026-10-02",
+      "displayDate": "2 Oct – 11 Oct 2026",
+      "daysLeft": 13,
+      "category": "Major Festival",
+      "badgeColor": "primary",
+      "description": "Nine sacred nights celebrating Goddess Durga's nine forms. Book your Navratri Havan or Kanya Pujan early.",
+      "ritual": "navratri-havan",
+      "ritualLabel": "Book Navratri Havan",
+      "muhurat": "Pratipada Sunrise — Shukla Paksha Ashwin"
+    },
+    {
+      "id": "dussehra-2026",
+      "name": "Vijayadashami (Dussehra)",
+      "deity": "Lord Rama & Goddess Durga",
+      "icon": "🏹",
+      "date": "2026-10-11",
+      "displayDate": "11 Oct 2026",
+      "daysLeft": 22,
+      "category": "Major Festival",
+      "badgeColor": "gold",
+      "description": "Celebration of Dharma's triumph over Adharma — Lord Rama's victory over Ravana and Goddess Durga's vanquishing of Mahishasura.",
+      "ritual": "griha-pravesh",
+      "ritualLabel": "Consult Acharya",
+      "muhurat": "Vijay Muhurat — Aparahna Kaal"
+    },
+    {
+      "id": "karva-chauth-2026",
+      "name": "Karva Chauth Puja",
+      "deity": "Lord Shiva, Parvati & Kartikeya",
+      "icon": "🌕",
+      "date": "2026-10-20",
+      "displayDate": "20 Oct 2026",
+      "daysLeft": 31,
+      "category": "Vrat & Puja",
+      "badgeColor": "primary",
+      "description": "Sacred moonrise fasting ritual by married women for husband's longevity and marital bliss, concluded with Chandra Darshan.",
+      "ritual": "satyanarayan",
+      "ritualLabel": "Book Puja Kit",
+      "muhurat": "Chandrodaya 20:42 IST"
+    },
+    {
+      "id": "diwali-2026",
+      "name": "Diwali — Lakshmi Puja",
+      "deity": "Goddess Lakshmi & Lord Ganesha",
+      "icon": "✨",
+      "date": "2026-10-29",
+      "displayDate": "29 Oct 2026",
+      "daysLeft": 40,
+      "category": "Major Festival",
+      "badgeColor": "gold",
+      "description": "Mahalakshmi Puja on Amavasya for wealth and prosperity. Book your Lakshmi-Kuber Puja with live Pandit.",
+      "ritual": "lakshmi-kuber",
+      "ritualLabel": "Book Lakshmi Puja",
+      "muhurat": "Pradosh Kaal — Vrishabh Lagna Shubh"
+    },
+    {
+      "id": "govardhan-puja-2026",
+      "name": "Govardhan Puja",
+      "deity": "Lord Krishna (Govardhandhari)",
+      "icon": "🏔️",
+      "date": "2026-10-30",
+      "displayDate": "30 Oct 2026",
+      "daysLeft": 41,
+      "category": "Vaishnava",
+      "badgeColor": "primary",
+      "description": "Annakut celebrations honouring Lord Krishna's lifting of Govardhan Parvat — 56 food offerings prepared.",
+      "ritual": "satyanarayan",
+      "ritualLabel": "Plan Annakut",
+      "muhurat": "Pratipada — Post Sunrise"
+    },
+    {
+      "id": "chhath-puja-2026",
+      "name": "Chhath Puja — Sandhya Arghya",
+      "deity": "Lord Surya & Chhathi Maiya",
+      "icon": "🌅",
+      "date": "2026-11-01",
+      "displayDate": "1 Nov 2026",
+      "daysLeft": 43,
+      "category": "Major Festival",
+      "badgeColor": "gold",
+      "description": "Ancient Vedic sun worship ritual performed on riverbanks — Sandhya Arghya at sunset and Usha Arghya at sunrise the next day.",
+      "ritual": "navagraha",
+      "ritualLabel": "Book Surya Puja",
+      "muhurat": "Sunset Arghya — 17:48 IST"
+    },
+    {
+      "id": "kartik-purnima-2026",
+      "name": "Kartik Purnima — Deva Deepawali",
+      "deity": "Lord Shiva & Kartikeya",
+      "icon": "🕯️",
+      "date": "2026-11-12",
+      "displayDate": "12 Nov 2026",
+      "daysLeft": 54,
+      "category": "Shiva Festival",
+      "badgeColor": "primary",
+      "description": "Celebrated as the birthday of Kartikeya and the festival when gods descend to Varanasi — 84,000 lamps lit on the Ghats.",
+      "ritual": "rudrabhishek",
+      "ritualLabel": "Book Rudrabhishek",
+      "muhurat": "Purnima Tithi Sunrise"
+    },
+    {
+      "id": "vivah-panchami-2026",
+      "name": "Vivah Panchami",
+      "deity": "Lord Rama & Goddess Sita",
+      "icon": "💍",
+      "date": "2026-11-24",
+      "displayDate": "24 Nov 2026",
+      "daysLeft": 66,
+      "category": "16 Sanskars",
+      "badgeColor": "gold",
+      "description": "Auspicious day commemorating Ram-Sita vivah — the most spiritually auspicious muhurat for Vedic Vivah Sanskar ceremonies.",
+      "ritual": "vivah",
+      "ritualLabel": "Book Vivah Sanskar",
+      "muhurat": "Panchami Tithi — Margashirsha"
+    }
+  ],
+  "kundli": {
+    "title": "Current Time Lagna Chart",
+    "subtitle": "Janma Kundli (Birth Chart) — Vedic Parashari System",
+    "image": "kundli-sample.png",
+    "imageAlt": "Lagna Chart — Vedic birth chart with planetary positions",
+    "note": "Sample Kundli generated for current muhurat. Enter your birth details for a personalized chart.",
+    "planets": [
+      { "name": "Surya (Sun)", "symbol": "Su", "house": 2, "degree": "02°" },
+      { "name": "Chandra (Moon)", "symbol": "Mo", "house": 10, "degree": "06°" },
+      { "name": "Mangal (Mars)", "symbol": "Ma", "house": 4, "degree": "90°" },
+      { "name": "Budha (Mercury)", "symbol": "Me", "house": 2, "degree": "19°" },
+      { "name": "Guru (Jupiter)", "symbol": "Ju", "house": 4, "degree": "23°" },
+      { "name": "Shukra (Venus)", "symbol": "Ve", "house": 11, "degree": "10°" },
+      { "name": "Shani (Saturn)", "symbol": "Sa", "house": 12, "degree": "18°" },
+      { "name": "Rahu", "symbol": "Ra", "house": 8, "degree": "04°" },
+      { "name": "Ketu", "symbol": "Ke", "house": 2, "degree": "04°" },
+      { "name": "Uranus", "symbol": "Ur", "house": 12, "degree": "11°" },
+      { "name": "Neptune", "symbol": "Ne", "house": 12, "degree": "08°" },
+      { "name": "Pluto", "symbol": "Pl", "house": 10, "degree": "08°" }
+    ],
+    "lagna": "Scorpio (Vrishchika)",
+    "cta": "Get Your Free Kundli Reading"
+  },
+  "hero": {
+    "shloka": "॥ ॐ तमसो मा ज्योतिर्गमय • श्रद्धा • संकल्प • संस्कार ॥",
+    "title": "Your rituals, organised.",
+    "subtitle": "A trusted ritual-management platform making Hindu ceremonies easier to discover, book, coordinate, track, and repeat for every family. Faith with less friction.",
+    "primaryCta": "Explore Ceremonies",
+    "secondaryCta": "108 Japa Mala",
+    "tertiaryCta": "Book Consultation"
+  },
+  "categories": [
+    "All",
+    "Home & Vastu",
+    "Vishnu",
+    "Shiva",
+    "16 Sanskars",
+    "Ancestral Peace",
+    "Health & Protection",
+    "Prosperity"
+  ],
+  "services": [
+    {
+      "id": "griha-pravesh",
+      "name": "Griha Pravesh Puja",
+      "icon": "🏠",
+      "category": "Home & Vastu",
+      "price": 5500,
+      "duration": "2.5 – 3 Hours",
+      "deity": "Lord Ganesha & Vastu Purush",
+      "desc": "Sacred Vedic ceremony performed before entering a new residence to cleanse energies and invoke divine abundance and peace.",
+      "tags": ["Most Booked", "Vedic", "Home"],
+      "inclusions": [
+        "1 Verified Vedic Pandit",
+        "Complete 18-Item Organic Samagri Kit",
+        "Vedic Kalash Sthapana & Vastu Havan",
+        "Official Digital Sankalp Certificate"
+      ]
+    },
+    {
+      "id": "satyanarayan",
+      "name": "Satyanarayan Katha & Havan",
+      "icon": "🪔",
+      "category": "Vishnu",
+      "price": 3500,
+      "duration": "2 Hours",
+      "deity": "Lord Satyanarayan (Vishnu)",
+      "desc": "Recitation of the sacred 5 chapters from the Skanda Purana, performed for thanksgiving, prosperity, and family harmony.",
+      "tags": ["Family Favorite", "Vishnu"],
+      "inclusions": [
+        "1 Verified Senior Purohit",
+        "Full Katha with Melodious Bhajans",
+        "Panchamrit Consecration & Tulsi Mala",
+        "Navagraha & Satyanarayan Havan"
+      ]
+    },
+    {
+      "id": "havan",
+      "name": "Maha Ganapati Havan",
+      "icon": "🔥",
+      "category": "Home & Vastu",
+      "price": 2500,
+      "duration": "1.5 – 2 Hours",
+      "deity": "Lord Ganesha",
+      "desc": "Holy Agnihotra fire ritual invoking Lord Ganesha to eliminate impediments from business, career, and household endeavors.",
+      "tags": ["Auspicious", "Obstacle Removal"],
+      "inclusions": [
+        "Ganapati Atharvashirsha Chanting",
+        "Agnihotra Fire Sanctification",
+        "Organic Samidha Woods & Gir Cow Ghee",
+        "Modak Prasad Consecration"
+      ]
+    },
+    {
+      "id": "rudrabhishek",
+      "name": "Maha Rudrabhishek Puja",
+      "icon": "🔱",
+      "category": "Shiva",
+      "price": 3800,
+      "duration": "2.5 Hours",
+      "deity": "Lord Shiva",
+      "desc": "Potent abhishek of the Shiva Linga with Panchamrit and Gangajal accompanied by Shukla Yajurveda Sri Rudram chanting.",
+      "tags": ["Powerful", "Shiva"],
+      "inclusions": [
+        "11 Recitations of Sri Rudram (Ekadasha)",
+        "Panchamrit & Holy Gangajal Abhishek",
+        "Bilva Patra & Bhasma Offerings",
+        "Mahamrityunjaya Shanti Havan"
+      ]
+    },
+    {
+      "id": "vastu-puja",
+      "name": "Vastu Shanti Puja",
+      "icon": "🕉️",
+      "category": "Home & Vastu",
+      "price": 5000,
+      "duration": "3 Hours",
+      "deity": "Vastu Purush & Dikpalas",
+      "desc": "Harmonizing residential and workplace directional energies (Vastu Doshas) according to ancient architectural Agamas.",
+      "tags": ["Architectural Harmony", "Home"],
+      "inclusions": [
+        "Vastu Purush Mandala Sthapana",
+        "8-Directional Dikpala Offerings",
+        "Copper Pyramid & Shanti Havan",
+        "Consecrated Prasad Box Delivery"
+      ]
+    },
+    {
+      "id": "naamkaran",
+      "name": "Naamkaran Sanskar",
+      "icon": "👶",
+      "category": "16 Sanskars",
+      "price": 4500,
+      "duration": "2 Hours",
+      "deity": "Kuldevata & Navagrahas",
+      "desc": "Traditional Vedic newborn naming ceremony on the 11th or 21st day calculated according to birth Nakshatra syllables.",
+      "tags": ["16 Sanskars", "Newborn"],
+      "inclusions": [
+        "Nakshatra Syllable Calculation",
+        "Navagraha Puja & Cradle Blessing",
+        "Honey & Curd Madhu-parka Blessing",
+        "Detailed Janampatri Chart Printed"
+      ]
+    },
+    {
+      "id": "mundan",
+      "name": "Mundan Sanskar (Chudakarana)",
+      "icon": "✂️",
+      "category": "16 Sanskars",
+      "price": 4000,
+      "duration": "2 Hours",
+      "deity": "Kuldevata & Ganga Mata",
+      "desc": "First tonsure ceremony to sever past karmic impressions, stimulate cranial vitality, and invoke mental clarity.",
+      "tags": ["16 Sanskars", "Child Purification"],
+      "inclusions": [
+        "Mundan Sankalp & Shanti Path",
+        "Curd & Turmeric Scalp Application",
+        "Ayushya Havan for Long Life",
+        "Sacred Hair Immersion in Gangajal"
+      ]
+    },
+    {
+      "id": "shradh",
+      "name": "Shradh & Pitru Tarpan",
+      "icon": "🙏",
+      "category": "Ancestral Peace",
+      "price": 4500,
+      "duration": "2 Hours",
+      "deity": "Pitru Devatas",
+      "desc": "Sacred ancestral homage with black sesame (Til), barley, and Kusha grass to seek ancestral tranquility and generational blessings.",
+      "tags": ["Solemn Vedic", "Ancestral"],
+      "inclusions": [
+        "Kusha Grass & Til Tarpan Vidhi",
+        "Pinda Daan Sacred Offerings",
+        "Ancestral Gotra Sankalp",
+        "Brahman Dakshina Arrangement"
+      ]
+    },
+    {
+      "id": "navagraha",
+      "name": "Navagraha Shanti Havan",
+      "icon": "🪐",
+      "category": "Health & Protection",
+      "price": 4200,
+      "duration": "2.5 Hours",
+      "deity": "9 Cosmic Planetary Deities",
+      "desc": "Propitiation of the nine planetary forces to balance astrological transits, alleviate Dasha afflictions, and bring stability.",
+      "tags": ["Astrological", "Protection"],
+      "inclusions": [
+        "9-Graha Mandala Sthapana with Colored Grains",
+        "Specific Planetary Ahutis with Dedicated Woods",
+        "Navagraha Stotram & Beej Mantra Chanting",
+        "Planetary Protective Amulet (Yantra)"
+      ]
+    },
+    {
+      "id": "mahamrityunjaya",
+      "name": "Maha Mrityunjaya Jaap & Havan",
+      "icon": "🛡️",
+      "category": "Health & Protection",
+      "price": 6500,
+      "duration": "3.5 Hours",
+      "deity": "Lord Tryambaka (Shiva)",
+      "desc": "Canonical life-invigorating Vedic anushthan performed for longevity, recovery from chronic ailments, and warding off untoward events.",
+      "tags": ["Healing", "Protection"],
+      "inclusions": [
+        "1008 / 5100 Chants by Specialized Acharyas",
+        "Medicinal Amrita Herb Offerings in Agni",
+        "Kavach & Raksha Sutra Consecration",
+        "Digital Sankalp & Live Family Streaming"
+      ]
+    },
+    {
+      "id": "lakshmi-kuber",
+      "name": "Mahalakshmi & Kuber Puja",
+      "icon": "💰",
+      "category": "Prosperity",
+      "price": 4800,
+      "duration": "2 Hours",
+      "deity": "Goddess Lakshmi & Lord Kuber",
+      "desc": "Sacred invocation of divine wealth, trade prosperity, and financial equilibrium for homes, commercial establishments, and startups.",
+      "tags": ["Prosperity", "Business"],
+      "inclusions": [
+        "Sri Suktam & Kanakadhara Stotra Recitation",
+        "Lotus Seed (Kamal Gatta) Ahutis",
+        "Silver Coin & Kuber Yantra Sanctification",
+        "Akshat & Gomti Chakra Blessings"
+      ]
+    },
+    {
+      "id": "vivah",
+      "name": "Vedic Vivah Sanskar",
+      "icon": "💍",
+      "category": "16 Sanskars",
+      "price": 15000,
+      "duration": "4 – 5 Hours",
+      "deity": "Agni Devata & Prajapati",
+      "desc": "Sacred matrimony solemnized through the seven canonical vows (Saptapadi), Kanyadaan, and holy Agni circumambulation.",
+      "tags": ["16 Sanskars", "Wedding"],
+      "inclusions": [
+        "2 Senior Vedic Acharyas with Melodious Shlokas",
+        "Complete Sacred Mandap Samagri Set",
+        "Laja Homa & Saptapadi Guidance",
+        "Bilingual Translation of Vows for Couple"
+      ]
+    }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Vedic Muhurat Discovery & Astrological Alignment",
+      "desc": "Select your desired ceremony and enter your family Gotra. Our high-precision Panchang astronomical engine calculates the auspicious Choghadiya and Shubh Muhurat."
+    },
+    {
+      "step": 2,
+      "title": "Verified Purohit & Acharya Matching",
+      "desc": "We match you with verified, background-checked Purohits trained in traditional Sanskrit universities (Sampurnanand, Varanasi). Clear transparent Dakshina with zero unexpected demands."
+    },
+    {
+      "step": 3,
+      "title": "Pure Organic Samagri Kit Delivered",
+      "desc": "A comprehensive 18-item kit containing Bhimseni camphor, A2 Gir cow ghee, certified Gangajal, unbroken hand-picked Akshat, and medicinal woods is prepared and delivered."
+    },
+    {
+      "step": 4,
+      "title": "Digital Sankalp Patra & Escrow Release",
+      "desc": "Upon sacred completion, your Dakshina is securely released from escrow, and you receive an official Kashi Vidvat Parishad verified Digital Sankalp Certificate with calendar reminder sync."
+    }
+  ],
+  "acharyas": [
+    {
+      "id": "rajesh",
+      "name": "Pandit Rajesh Sharma",
+      "initials": "RS",
+      "title": "Acharya, Sampurnanand Sanskrit Vishwavidyalaya",
+      "rating": 4.98,
+      "reviews": 247,
+      "experience": "18+ Yrs Exp",
+      "bio": "Specialist in Griha Pravesh, Vastu Shanti, and Mahamrityunjaya Havan with Shukla Yajurveda traditions. Renowned for patient, clear mantra explanations.",
+      "badge": "100% Verified Acharya",
+      "defaultCeremony": "griha-pravesh"
+    },
+    {
+      "id": "anand",
+      "name": "Pandit Anand Shastri",
+      "initials": "AS",
+      "title": "Shastri, Kashi Naresh Sanskrit Vidyalaya",
+      "rating": 4.92,
+      "reviews": 310,
+      "experience": "14+ Yrs Exp",
+      "bio": "Venerated Purohit specializing in 16 Sanskars, Ramcharitmanas recitation, and elaborate Havan rituals. Over a decade of ritual service in Delhi NCR.",
+      "badge": "100% Verified Acharya",
+      "defaultCeremony": "satyanarayan"
+    },
+    {
+      "id": "manoj",
+      "name": "Pandit Manoj Mishra",
+      "initials": "MM",
+      "title": "Acharya, Darbhanga Sanskrit Vishwavidyalaya",
+      "rating": 4.88,
+      "reviews": 190,
+      "experience": "11+ Yrs Exp",
+      "bio": "Dedicated to Vedic rituals with pristine pronunciation and adherence to family Kul-parampara. Highly appreciated for warm guidance with elders and children.",
+      "badge": "100% Verified Acharya",
+      "defaultCeremony": "havan"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "Pandit Rajesh Sharma ji conducted our Griha Pravesh with such sacred devotion. Every mantra was pronounced with immaculate clarity, and the pure samagri box arrived neatly labeled a day in advance. A truly serene experience for our family.",
+      "author": "Anurag & Neha Sharma",
+      "location": "Griha Pravesh Puja • Sector 137, Noida"
+    },
+    {
+      "id": 2,
+      "quote": "Organizing our annual Satyanarayan Katha used to mean rushing across three markets for puja samagri. With Aaradhya, everything from Gir cow ghee to the Tulsi leaves was delivered fresh and certified pure. Outstanding service!",
+      "author": "Vikram & Sunita Kapoor",
+      "location": "Satyanarayan Katha • Greater Kailash, New Delhi"
+    },
+    {
+      "id": 3,
+      "quote": "The Maha Rudrabhishek was conducted with Shukla Yajurveda chanting that filled our entire home with divine peace. The digital certificate with our Gotra sankalp was an unexpected and deeply meaningful touch.",
+      "author": "Dr. Anand Mehta",
+      "location": "Maha Rudrabhishek • DLF Phase 5, Gurgaon"
+    },
+    {
+      "id": 4,
+      "quote": "Having our daughter’s Naamkaran Sanskar coordinated through Aaradhya gave our elders complete peace of mind. Transparent pricing and no awkward bargaining on Dakshina. Truly faith with less friction.",
+      "author": "Pooja & Siddharth Verma",
+      "location": "Naamkaran Sanskar • Indirapuram, Ghaziabad"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How are Aaradhya Pandits vetted and certified?",
+      "answer": "Every Purohit on Aaradhya undergoes a rigorous 4-tier verification protocol: (1) Identity and address verification with police background check, (2) Validation of degrees/titles (Shastri or Acharya) from accredited institutions such as Sampurnanand Sanskrit Vishwavidyalaya, (3) Audition of Vedic mantra recitation and shloka pronunciation, and (4) Personal interview focusing on punctuality, dignified conduct, and customer etiquette."
+    },
+    {
+      "question": "What is included in the Pure Organic Samagri Kit?",
+      "answer": "Our Samagri kits are curated according to canonical Grihya Sutra manuals. They include certified Haridwar Gangajal, Bhimseni unadulterated camphor, 100% pure Gir Cow A2 ghee, hand-selected unblemished Akshat (rice), organic kumkum and turmeric, fresh mango/ashoka leaves, brass diya with cotton wicks, and consecrated Navagraha medicinal samidha sticks."
+    },
+    {
+      "question": "How does the 100% Sacred Escrow protection work?",
+      "answer": "When you book a ceremony, your Dakshina is safely held in our escrow vault. The pandit does not receive payout until the puja is performed to your complete satisfaction and you confirm ritual completion. In the rare event of cancellation or Pandit no-show, a 100% immediate refund is processed to your original payment method."
+    },
+    {
+      "question": "Can we reschedule the Muhurat date or time if our family plans shift?",
+      "answer": "Yes, absolutely. We understand that family schedules and astrological muhurats can require adjustments. You can reschedule your ceremony up to 24 hours prior to the scheduled Muhurat free of charge directly via your Aaradhya account or our 24/7 WhatsApp concierge."
+    },
+    {
+      "question": "What is the Digital Sankalp Patra and how do we access it?",
+      "answer": "The Digital Sankalp Patra is an ornate Sanskrit certificate cryptographically generated upon the fulfillment of your ritual. It documents your family Gotra, the specific ceremony performed, conducting Purohit, and exact Vedic tithi. You can download it as a high-resolution PDF for framing or export it to Google/Apple Calendar for annual anniversary reminders."
+    },
+    {
+      "question": "Do you offer remote / e-Puja options for non-resident devotees?",
+      "answer": "Yes. For families living outside India or unable to physically gather, our Acharyas conduct authentic remote Sankalp Pujas live from Varanasi (Kashi) or Haridwar. Consecrated dry prasad and sacred mauli threads are safely dispatched by international courier."
+    }
+  ]
+}

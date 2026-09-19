@@ -15,9 +15,40 @@
   <!-- Font Awesome 6.5.1 (High-Performance Vector Icon Library) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+  <!-- Favicon and App Icon -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="shortcut icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="mode-responsive" data-theme="dark">
+  <!-- Aaradhya Sacred Splash Screen with Logo -->
+  <div id="splashScreen" class="splash-screen" role="dialog" aria-modal="true" aria-label="Aaradhya Splash Screen" onclick="dismissSplashScreen()">
+    <div class="splash-particles-mesh" aria-hidden="true"></div>
+    <div class="splash-card" onclick="event.stopPropagation()">
+      <div class="splash-logo-container">
+        <div class="splash-halo"></div>
+        <img src="logo.png" alt="Aaradhya Logo" class="splash-logo">
+      </div>
+      <div class="splash-brand-info">
+        <h1 class="splash-title">Aaradhya</h1>
+        <p class="splash-subtitle">॥ श्रद्धा • संकल्प • संस्कार ॥</p>
+        <p class="splash-tagline">Your rituals, organised.</p>
+      </div>
+      <div class="splash-loader-wrap">
+        <div class="splash-progress-track">
+          <div class="splash-progress-bar" id="splashProgressBar"></div>
+        </div>
+        <div class="splash-status" id="splashStatus">Awakening Vedic Sanctum...</div>
+      </div>
+      <button type="button" class="splash-skip" onclick="dismissSplashScreen()" aria-label="Enter App Directly">
+        <span>Enter App</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
   <!-- Interactive Ambient Cursor Glow Mesh -->
   <div class="ambient-cursor-glow" id="ambientCursorGlow" aria-hidden="true"></div>
 
@@ -34,7 +65,7 @@
     <div class="context-menu-surface md-elevation-3" id="contextMenuSurface" role="menu" aria-label="Demo Presentation & Developer Controller" onclick="event.stopPropagation()">
       <div class="context-menu-header">
         <div class="context-menu-title">
-          <i class="fa-solid fa-hands-praying" style="color:var(--gold)"></i>
+          <img src="logo.png" alt="Aaradhya Logo" class="context-brand-logo">
           <span>Aaradhya Controller</span>
         </div>
         <span class="context-menu-badge">Material UI 3</span>
@@ -89,6 +120,13 @@
             <span>Toggle 390px mobile frame & responsive</span>
           </div>
         </button>
+        <button type="button" class="context-menu-item md-ripple" onclick="showSplashScreen(); closeContextMenu();" role="menuitem">
+          <span class="context-icon-box" style="background:rgba(255,111,0,0.18); color:var(--saffron)"><i class="fa-solid fa-play"></i></span>
+          <div class="context-item-text">
+            <strong>Splash Screen</strong>
+            <span>Replay opening screen with logo</span>
+          </div>
+        </button>
         <button type="button" class="context-menu-item md-ripple" onclick="confirmResetDemoData(); closeContextMenu();" role="menuitem" style="border-top:1px solid var(--border-subtle); color:#FF8A80">
           <span class="context-icon-box" style="background:rgba(255,61,0,0.18); color:#FF8A80"><i class="fa-solid fa-arrow-rotate-left"></i></span>
           <div class="context-item-text">
@@ -112,7 +150,7 @@
       <header class="app-header">
         <div class="header-inner">
           <button type="button" class="brand-btn md-ripple" onclick="nav('home')" aria-label="Aaradhya Home">
-            <span class="sacred-symbol">ॐ</span>
+            <img src="logo.png" alt="Aaradhya Logo" class="brand-logo-img">
             <div class="brand-text">
               <span class="brand-name">Aaradhya</span>
               <span class="brand-tagline">Your rituals, organised.</span>

@@ -844,8 +844,8 @@
         <footer class="app-footer">
           <div class="footer-grid">
             <div class="footer-col">
-              <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px">
-                <span class="sacred-symbol" style="width:36px; height:36px; font-size:20px">ॐ</span>
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px">
+                <img src="logo.png" alt="Aaradhya Logo" class="brand-logo-img" style="width:36px; height:36px">
                 <span style="font-family:var(--font-display); font-size:22px; font-weight:900" class="gradient-text-saffron">Aaradhya</span>
               </div>
               <p class="text-muted" style="font-size:13px; line-height:1.7; max-width:320px">
@@ -3322,6 +3322,90 @@
   window.handleImportData = handleImportData;
   window.openTelemetryDrawer = openTelemetryDrawer;
 
+  // Splash Screen Lifecycle Management
+  let splashDismissTimeout = null;
+  let splashProgressInterval = null;
+
+  function initSplashScreen() {
+    const splash = document.getElementById('splashScreen');
+    const bar = document.getElementById('splashProgressBar');
+    const status = document.getElementById('splashStatus');
+    if (!splash) return;
+
+    if (splashDismissTimeout) clearTimeout(splashDismissTimeout);
+    if (splashProgressInterval) clearInterval(splashProgressInterval);
+
+    let progress = 0;
+    if (bar) bar.style.width = '0%';
+
+    const stages = [
+      { at: 20, text: 'Awakening Vedic Sanctum...' },
+      { at: 50, text: 'Synchronizing Panchang Muhurat...' },
+      { at: 80, text: 'Loading Sacred Ritual Vault...' },
+      { at: 100, text: 'Namaste! Welcome to Aaradhya' }
+    ];
+
+    splashProgressInterval = setInterval(() => {
+      progress += Math.floor(Math.random() * 16) + 12;
+      if (progress > 100) progress = 100;
+      if (bar) bar.style.width = `${progress}%`;
+
+      if (status) {
+        for (let i = stages.length - 1; i >= 0; i--) {
+          if (progress >= stages[i].at) {
+            status.textContent = stages[i].text;
+            break;
+          }
+        }
+      }
+
+      if (progress >= 100) {
+        clearInterval(splashProgressInterval);
+        splashDismissTimeout = setTimeout(() => {
+          dismissSplashScreen();
+        }, 350);
+      }
+    }, 130);
+
+    const onKeyDismiss = (e) => {
+      if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+        dismissSplashScreen();
+        window.removeEventListener('keydown', onKeyDismiss);
+      }
+    };
+    window.addEventListener('keydown', onKeyDismiss);
+  }
+
+  function dismissSplashScreen() {
+    if (splashProgressInterval) clearInterval(splashProgressInterval);
+    if (splashDismissTimeout) clearTimeout(splashDismissTimeout);
+
+    const splash = document.getElementById('splashScreen');
+    if (!splash || splash.classList.contains('splash-hidden')) return;
+
+    splash.classList.add('splash-hidden');
+    setTimeout(() => {
+      splash.style.display = 'none';
+    }, 600);
+  }
+
+  function showSplashScreen() {
+    const splash = document.getElementById('splashScreen');
+    const bar = document.getElementById('splashProgressBar');
+    const status = document.getElementById('splashStatus');
+    if (!splash) return;
+
+    splash.style.display = 'flex';
+    void splash.offsetWidth; // Force CSS reflow
+    splash.classList.remove('splash-hidden');
+    if (bar) bar.style.width = '0%';
+    if (status) status.textContent = 'Awakening Vedic Sanctum...';
+    initSplashScreen();
+  }
+
+  window.dismissSplashScreen = dismissSplashScreen;
+  window.showSplashScreen = showSplashScreen;
+
   // React to store changes
   Store.subscribe(() => {
     renderApp();
@@ -3343,5 +3427,6 @@
     initMaterialRipples();
     initNetworkResilience();
     renderApp();
+    initSplashScreen();
   });
 })();
